@@ -27,8 +27,8 @@ $(document).ready(function(){
  });
  
  
-// swiper cards
-const swiperCards = new Swiper('.js-cards', {
+// swiper faqs
+const swiperFaqs = new Swiper('.js-faqs', {
    // Optional parameters
    loop: true,
    slidesPerView: 4,
