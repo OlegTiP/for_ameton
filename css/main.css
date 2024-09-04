@@ -65,6 +65,7 @@ body {
   font-size: 60px;
   line-height: 120%;
   color: #fff;
+  z-index: 1;
 }
 
 .promo .promo__descr {
@@ -75,6 +76,7 @@ body {
   line-height: 140%;
   color: #fff;
   text-align: center;
+  z-index: 1;
 }
 
 .promo .promo__buttons {
@@ -82,6 +84,7 @@ body {
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 8px;
   max-width: 664px;
+  z-index: 1;
 }
 
 .promo .promo__button:link,
@@ -151,6 +154,15 @@ body {
   height: 56px;
   background: #F9F9F9;
   border-radius: 13.3311px;
+}
+
+.social .social__links a svg path {
+  fill: #36BA5F;
+  transition: fill .2s ease-in-out;
+}
+
+.social .social__links a:hover svg path {
+  fill: #93BBEA;
 }
 
 /* faqs */
@@ -250,7 +262,7 @@ body {
   opacity: 0;
   transition: opacity .2s ease-in-out;
 }
-.faqs .swiper-slide.swiper-slide-fully-visible {
+.faqs .swiper-slide.swiper-slide-visible {
   opacity: 1;
 }
 

@@ -20,23 +20,27 @@ const swiperFaqs = new Swiper('.js-faqs', {
       prevEl: '.swiper-button-prev',
    },
    breakpoints: {
-      390: {
-         slidesPerView: 1
+      320: {
+         slidesPerView: 1,
+         spaceBetween: 10
       },
-      // 600: {
-      //    slidesPerView: 2
-      // },
+      460: {
+         slidesPerView: 2,
+         spaceBetween: 15
+      },
       768: {
-         slidesPerView: 2
+         slidesPerView: 2,
+         spaceBetween: 15
       },
       1024: {
+         slidesPerView: 2,
+         spaceBetween: 24
+      },
+      1280: {
          slidesPerView: 4,
          spaceBetween: 24
       },
-      1440: {
-         slidesPerView: 4,
-         spaceBetween: 20
-      },
+
    },
 
 });
