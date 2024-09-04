@@ -19,6 +19,7 @@
 
    .promo .promo__button:link, .promo .promo__button:visited {
       padding: 15px 10px;
+      font-size: 14px;
    }
    .promo {
       margin-bottom: 40px;
@@ -105,6 +106,10 @@
    .promo::after {
       width: 204px;
       height: 165px;
+   }
+
+   .promo .promo__button svg {
+      margin-right: 5px;
    }
 
   .social {
