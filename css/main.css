@@ -248,6 +248,12 @@ body {
   background: #fff;
   border-radius: 50%;
   right: 0;
+  box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.09);
+  transition: background .2s ease-in-out;
+}
+.faqs .swiper-button-next:hover,  
+.faqs .swiper-rtl .swiper-button-prev:hover {
+  background: #F9F9F9;
 }
 .faqs .swiper-button-prev, 
 .faqs .swiper-rtl .swiper-button-next {
@@ -256,6 +262,12 @@ body {
   background: #fff;
   border-radius: 50%;
   left: 0;
+  box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.09);
+  transition: background .2s ease-in-out;
+}
+.faqs .swiper-button-prev:hover, 
+.faqs .swiper-rtl .swiper-button-next:hover {
+  background: #F9F9F9;
 }
 
 .faqs .swiper-slide {
