@@ -1,43 +1,15 @@
-// menu2
-$(document).ready(function(){
-   $('.header__item').click(function(){
-     var nav2 = $(this).next('.header__nav2');
-     $('.header__nav2').not(nav2).slideUp();
-     $('.header__item.active').not(this).removeClass('active');
-     $(this).toggleClass('active');
-     nav2.slideToggle();
-   });
- 
-   $(document).mouseup(function(e) {
-     var container = $(".header__item-inner");
- 
-     if (!container.is(e.target) && container.has(e.target).length === 0) {
-       $('.header__item').removeClass('active');
-       $('.header__nav2').slideUp();
-     }
-   });
- });
- 
-//  burger menu
- $(document).ready(function() {
-   $('.header__burger').click(function() {
-     $('.header__top-wrapper').toggleClass('active');
-     $('body').toggleClass('stop-skroll');
-   });
- });
- 
- 
+
 // swiper faqs
 const swiperFaqs = new Swiper('.js-faqs', {
-   // Optional parameters
    loop: true,
+   watchSlidesProgress: true,
    slidesPerView: 4,
    autoHeight: true,
-   spaceBetween: 20,
-   loop: true,
-   autoplay: {
-      delay: 5000, // Задержка между переключениями в миллисекундах (5 секунд)
-    },
+   spaceBetween: 24,
+   loop: false,
+   // autoplay: {
+   //    delay: 5000, // Задержка между переключениями в миллисекундах (5 секунд)
+   //  },
 
    pagination: {
       el: '.swiper-pagination',
@@ -46,10 +18,6 @@ const swiperFaqs = new Swiper('.js-faqs', {
    navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
-   },
-
-   scrollbar: {
-      el: '.swiper-scrollbar',
    },
    breakpoints: {
       390: {
@@ -62,8 +30,8 @@ const swiperFaqs = new Swiper('.js-faqs', {
          slidesPerView: 2
       },
       1024: {
-         slidesPerView: 3,
-         spaceBetween: 20
+         slidesPerView: 4,
+         spaceBetween: 24
       },
       1440: {
          slidesPerView: 4,
@@ -72,4 +40,10 @@ const swiperFaqs = new Swiper('.js-faqs', {
    },
 
 });
+
+document.querySelectorAll('button, a').forEach((element) => {
+   element.addEventListener('click', function(event) {
+     event.preventDefault(); 
+   });
+ });
 

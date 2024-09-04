@@ -1,3 +1,312 @@
 body {
   font-family:'Museo-Sans-Cyrl', serif;
 }
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.title-h2 {
+  margin-bottom: 32px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 120%;
+  text-align: center;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 40px 40px 80px;
+  max-width: 1280px;
+  overflow: hidden;
+}
+
+.promo {
+  padding: 40px 40px 54px 40px;
+  margin-bottom: 82px;
+  position: relative;
+  background: #93BBEA;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 40px;
+}
+
+.promo::before {
+  content: '';
+  position: absolute;
+  background: url('/img/ameton_promo_bg2.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 274px;
+  height: 195px;
+  left: 0;
+  top: 37px;
+}
+
+.promo::after {
+  content: '';
+  position: absolute;
+  background: url('/img/ameton_promo_bg1.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 274px;
+  height: 195px;
+  right: -8px;
+  bottom: 0;
+}
+
+.promo .promo__title {
+  margin-bottom: 4px;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 120%;
+  color: #fff;
+}
+
+.promo .promo__descr {
+  margin-bottom: 40px;
+  max-width: 535px;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 140%;
+  color: #fff;
+  text-align: center;
+}
+
+.promo .promo__buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 8px;
+  max-width: 664px;
+}
+
+.promo .promo__button:link,
+.promo .promo__button:visited {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #1A1A1A;
+  background: #fff;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 120%;
+  transition: background .2s ease-in-out;
+}
+
+.promo .promo__button:hover,
+.promo .promo__button:active {
+  background: #F9F9F9;
+}
+
+.promo .promo__button svg {
+  margin-right: 8px;
+}
+
+/* social */
+
+.social {
+  margin: 0 auto;
+  margin-bottom: 70px;
+  padding: 42px 40px 55px;
+  max-width: 996px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #1A1A1A;
+  background: #FFFFFF;
+  box-shadow: 0px 20px 60px rgba(26, 26, 26, 0.05);
+  border-radius: 40px;
+}
+
+.social .social__subtitle {
+  margin-bottom: 16px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.social .social__title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 120%;
+}
+
+.social .social__links {
+  display: flex;
+  gap: 14px;
+}
+.social .social__links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: #F9F9F9;
+  border-radius: 13.3311px;
+}
+
+/* faqs */
+
+.faqs {
+  margin-bottom: 107px;
+  position: relative;
+}
+
+.faqs .faqs__items {
+  position: relative;
+}
+.faqs .faqs__item {
+  padding: 16px;
+  padding-right: 5px;
+  display: flex;
+  justify-content: space-between;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+  height: 100% !important;
+  color: #1A1A1A;
+  text-decoration: none;
+  transition: background .2s ease-in-out;
+}
+
+.faqs .faqs__item:hover {
+  background: #F9F9F9;
+}
+
+
+.faqs .faqs__item img {
+  align-self: center;
+  width: 104px;
+  height: 93px;
+  transition: transform .2s ease-in-out;
+}
+
+.faqs .faqs__item:hover img {
+  transform: scale(1.1);
+}
+
+
+.faqs .faqs__title {
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.faqs .faqs__descr {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 140%;
+  color: #949494;
+}
+
+.faqs .swiper-button-next:after, 
+.faqs .swiper-rtl .swiper-button-prev:after {
+  content: '';
+  background: url('../img/ameton_arr.svg');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 7px;
+  height: 12px;
+}
+.faqs .swiper-button-prev:after, 
+.faqs .swiper-rtl .swiper-button-next:after {
+  content: '';
+  background: url('../img/ameton_arr.svg');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 7px;
+  height: 12px;
+  transform: rotate(180deg);
+}
+.faqs .swiper-button-next,  
+.faqs .swiper-rtl .swiper-button-prev {
+  width: 44px;
+  height: 44px;
+  background: #fff;
+  border-radius: 50%;
+  right: 0;
+}
+.faqs .swiper-button-prev, 
+.faqs .swiper-rtl .swiper-button-next {
+  width: 44px;
+  height: 44px;
+  background: #fff;
+  border-radius: 50%;
+  left: 0;
+}
+
+.faqs .swiper-slide {
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+}
+.faqs .swiper-slide.swiper-slide-fully-visible {
+  opacity: 1;
+}
+
+/* reference */
+
+.reference {
+  margin: 0 auto;
+  max-width: 996px;
+}
+
+.reference .reference__items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.reference .reference__item {
+  position: relative;
+  display: block;
+  padding: 20px 24px;
+  padding-right: 44px;
+  text-decoration: none;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+  transition: background .2s ease-in-out;
+}
+.reference .reference__item:hover {
+  background: #F9F9F9;
+}
+.reference .reference__item::after {
+  content: '';
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: url('../img/ameton_arr.svg');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 7px;
+  height: 12px;
+}
+
+.reference .reference__title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 120%;
+  color: #1A1A1A;
+}
+
+.reference .reference__descr {
+  margin-top: 4px;
+  color: #949494;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 140%;
+  max-width: 430px;
+}
