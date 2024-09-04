@@ -184,5 +184,16 @@
    .reference .reference__descr {
       font-size: 12px;
    } 
+   /* article */
+   .article .bottom-block .bottom-block__chat {
+      min-width: 0;
+   }
+   .article .article__descr {
+      font-size: 12px;
+      text-align: justify;
+   }
+   .article .article__title {
+      font-size: 18px;
+   }
  }
  
