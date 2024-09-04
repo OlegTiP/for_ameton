@@ -47,7 +47,11 @@ const swiperFaqs = new Swiper('.js-faqs', {
 
 document.querySelectorAll('button, a').forEach((element) => {
    element.addEventListener('click', function(event) {
-     event.preventDefault(); 
+     if (element.tagName === 'A' && element.getAttribute('href') === '#') {
+       event.preventDefault();
+     } else if (element.tagName === 'BUTTON') {
+       event.preventDefault();
+     }
    });
- });
+});
 
